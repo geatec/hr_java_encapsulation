@@ -3,7 +3,7 @@
 
 import java.lang.System;
 
-class Calculator {
+public class Calculator {
     /*
     Question: What's the outcome of 2[enter] 5[enter] 3[enter] +[enter] *[enter]? Why?
 
@@ -19,7 +19,7 @@ class Calculator {
         print ("This calculator uses Reverse Polish Notation,");
         print ("just like the one that helped put man on the moon:\n");
         print ("<operand 1>[enter] <operand 2>[enter] <operator>[enter]\n");
-        print ("Operands: +-*/");
+        print ("Operators: +-*/");
         print ("To clear, enter c, to quit, enter q\n");
 
 
@@ -57,13 +57,13 @@ class Calculator {
                             stack.push (Float.parseFloat (anInput));
                         }
                         catch (Exception exception) {
-                            print (exception.toString ());  
+                            print (exception);  
                         }
                     }
                 }
             }
             catch (Exception exception) {
-                print (exception.toString ());
+                print (exception);
             }
         }
         while (anInput.charAt (0) != 'q');
@@ -74,13 +74,13 @@ class Calculator {
     // --- Fields ---
     
     private final int stackSize = 4;
-    Stack stack = new Stack (stackSize);
+    private Stack stack = new Stack (stackSize);
+    
+    // --- Methods ---
     
     private void print (Object anObject) {
         System.out.print (" " + anObject.toString () + "\n");
     }
-    
-    // --- Methods ---
     
     private String input () {
         return System.console () .readLine ();

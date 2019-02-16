@@ -1,7 +1,7 @@
 // Copyright: GEATEC engineering
 // License: Apache 2
 
-class Stack {
+public class Stack {
     
     // ====== Public part ======
     
@@ -11,14 +11,14 @@ class Stack {
         clear (maximumSize);
     }
 
-    public void clear (int maximumSize) {
+    public void clear (int maximumSize) {   // Local variable will hide field by the same name, use 'this' to distinguish
         this.maximumSize = maximumSize;     // Don't use contorted names to solve non-existing name conflicts
         clear ();
     }
 
     public void clear () {
-        this.elements = new Object [this.maximumSize];
-        this.size = 0;
+        elements = new Object [maximumSize];
+        size = 0;
     }
 
     public Object push (Object element) throws Exception {

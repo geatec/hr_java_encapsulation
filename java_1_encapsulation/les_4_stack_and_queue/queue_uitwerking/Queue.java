@@ -1,7 +1,7 @@
 // Copyright: GEATEC engineering
 // License: Apache 2
 
-class Queue {
+public class Queue {
     
     // ====== Public part ======
     
@@ -11,14 +11,14 @@ class Queue {
         clear (maximumSize);
     }
 
-    public void clear (int maximumSize) {
+    public void clear (int maximumSize) {   // Local variable will hide field by the same name, use 'this' to distinguish
         this.maximumSize = maximumSize;     // Don't use contorted names to solve non-existing name conflicts
         clear ();
     }
 
     public void clear () {
-        this.elements = new Object [this.maximumSize];
-        this.size = 0;
+        elements = new Object [maximumSize];
+        size = 0;
     }
 
     public Object put (Object element) throws Exception {
@@ -54,13 +54,15 @@ class Queue {
     
     // --- Fields ---
     
-    private int getNextIndex (int index) {
-        return (index + 1) % maximumSize;
-    }
-    
     private Object [] elements;
     private int size = 0;
     private int getIndex = 0;
     private int putIndex = 0;
     private int maximumSize = 0;
+    
+    // --- Methods ---
+
+    private int getNextIndex (int index) {
+        return (index + 1) % maximumSize;
+    }    
 }

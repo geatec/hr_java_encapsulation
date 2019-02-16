@@ -3,7 +3,7 @@
 
 import java.lang.System;
 
-class Main {    
+public class Main {    
     public static void main (String [] args) {
         Obfuscator obfuscator = new Obfuscator (256);
         

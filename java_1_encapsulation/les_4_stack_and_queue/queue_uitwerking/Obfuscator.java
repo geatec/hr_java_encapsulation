@@ -1,7 +1,7 @@
 // Copyright: GEATEC engineering
 // License: Apache 2
 
-class Obfuscator {   // Don't inherit from 3rd party Queue, whose interface may change
+public class Obfuscator {   // Don't inherit from 3rd party Queue, whose interface may change
     /*
     Question: Can you make the queue work without remembering getIndex?
     
@@ -20,7 +20,7 @@ class Obfuscator {   // Don't inherit from 3rd party Queue, whose interface may 
     public String put (String plainWord) throws Exception {
         String codedWord = "";
         for (int index = 0; index < plainWord.length (); index++) {
-            codedWord +=  (char )(plainWord.charAt (index) + 1);    // Simplistic obfuscation of ASCII codepage only
+            codedWord += (char) (plainWord.charAt (index) + 1);    // Simplistic obfuscation of ASCII codepage only
         }
         wordQueue.put (codedWord);
         return codedWord;
