@@ -18,7 +18,7 @@ class RepeatedInput extends CheckedInput {
                 return super.ask (prompt + " (" + (maxNrOfRepetitions - repetitionIndex) + " attempts left) ");
             }
             catch (CoinInputException coinInputException) {
-                conio.print (coinInputException.getMessage ());
+                console.print (coinInputException.getMessage ());
             }
         }
         // We only get here after too much out-of-range answers

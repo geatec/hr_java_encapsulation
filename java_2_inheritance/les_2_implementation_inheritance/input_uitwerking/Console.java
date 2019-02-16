@@ -3,7 +3,8 @@
 
 import java.util.Scanner;
 
-class Conio {
+class Console {
+    
     // ====== Public part ======
     
     // --- Methods ---

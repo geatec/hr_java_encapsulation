@@ -9,11 +9,11 @@ public class CoinInput {
     
     public CoinInput (float eurosPerCoin) {
         this.eurosPerCoin = eurosPerCoin;
-        conio = new Conio ();
+        console = new Console ();
     }
         
     public float ask (String prompt) throws Exception {
-        return eurosPerCoin * Float.parseFloat (conio.input (prompt));
+        return eurosPerCoin * Float.parseFloat (console.input (prompt));
     }
    
     // ====== Protected part ======
@@ -21,5 +21,5 @@ public class CoinInput {
     // --- Fields ---
     
     protected float eurosPerCoin;
-    protected Conio conio;
+    protected Console console;
 }
