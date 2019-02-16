@@ -1,0 +1,11 @@
+- Show complete demo to students on smartscreen
+- Especially explain CheckedInput.java, as it shows implementation inheritance
+- Tell students to derive a class that repeats the question until an acceptable amount is given or a maximum repeat count is exceeded
+- Don't distribute any .class files
+- Don't distribute RepeatedInput.java, let students practice programming that themselves
+
+Class hierarchy in the end:
+
+CoinInput
+    CheckedInput
+        RepeatedInput

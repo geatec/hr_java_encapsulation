@@ -1,0 +1,13 @@
+- Show complete demo to students on smartscreen
+- Especially explain Circle.java and Square.java, as they show implementation inheritance
+- Tell students to derive classes for Ellipses (with a second radius) and Rectangles (with a second side)
+- Don't distribute any .class files
+- Don't distribute Ellipse.java and Rectangle.java, let students practice programming those themselves
+
+Class hierarchy in the end:
+
+Shape
+    Circle
+        Ellipse
+    Square
+        Rectangle
