@@ -1,0 +1,23 @@
+- Show complete demo to students on smartscreen
+- Explain that areas of Squares, Rectangles, Circles and Ellipses are listed in descendingly sorted order,
+  but Lines aren't included in the list, since they don't have an area.
+- Explain that, to this end, Square, Rectangle, Circle and Ellipse implement (DO NOT YET SHOW HOW) the Surface interface with method getArea, whereas Line does not.
+- Explain that implementation of Surface by Rectangle and Ellips is an obligation inherited from Square and Circle, rather than requiring repeated use of the "implements" keyword.
+Remark: Class line was added since without it, abstract method getArea  could have simply been added to abstract class Shape.
+- Explain (and show) how the bubble sort algorithm in class SurfaceSorter uses getArea.
+- Show the implementation of getArea in Square and Rectangle but NOT in Cirlce and Ellipse.
+- Don't distribute the source code of Circle and Ellipse, but have the student expand these classes with an implementation of getArea, that were treated in the previous lesson.
+  The students can use Square.getArea and Rectangle.getArea as an example, and Google for the area formulae of Circle and Ellipse.
+
+Class hierarchy in the end:
+
+Shape                Surface
+    Circle ------------+
+        Ellipse        |
+    Square ------------+
+        Rectangle
+    Line
+    
+- Abstract base classes and abstract methods are exemplified by the code of class Shape.
+- The instanceof operator is exemplified in Canvas.add.
+
